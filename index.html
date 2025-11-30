@@ -154,13 +154,15 @@
               <span class="badge">Jun 2025 — Present</span>
               <span>Cambridge, MA</span>
             </div>
-            <h3>Harvard & BCH CHIP Lab (PI: Dr. Maimuna Majumder)</h3>
-            <p class="timeline-role">Machine Learning Engineer · RareMind</p>
+            <h3>Harvard & BCH CHIP Lab · Prof. Maimuna Majumder</h3>
+            <p class="timeline-role">Machine Learning Engineer · Agentic Unified Review of Unstructured Media</p>
             <p>
-              Built a multi-agent system that converts static web scraping into
-              structured public-health event data, pairing a relevance gate with
-              ClinPhen-driven fact checking to boost coverage +13.6% while
-              lowering review cost 12%.
+              Designed a multi-agent workflow that validates static web scraping with an LLM-backed extraction
+              pipeline and modular roles—Relevance Gate, Layout Parser, Fact Checker, Credibility Scorer, and
+              Arbiter—to keep the review loop fast and affordable while skipping irrelevant sources, batching
+              requests, and capping runtime/cost. Benchmarked against human-labeled datasets to deliver +100 pp
+              discovery recall, +13.6% extra coverage from new events, 12% more fresh discoveries, and 29% fewer
+              false positives after review, trading a small cost increase for broader, cleaner coverage.
             </p>
           </article>
           <article class="timeline-card">
@@ -168,12 +170,14 @@
               <span class="badge">Sep 2025 — Present</span>
               <span>Cambridge, MA</span>
             </div>
-            <h3>Harvard IACS · ChronicQue</h3>
-            <p class="timeline-role">AI Researcher</p>
+            <h3>Harvard IACS · ChroniCue</h3>
+            <p class="timeline-role">AI Researcher · Diagnostic Assistant for Rare & Common Diseases</p>
             <p>
-              Closed the rare-disease diagnosis gap (often 4–5 years) by blending
-              a disease-matcher with a meta-learner that routes cases between RAG
-              clinics, achieving P@0.84 / R@0.78 / F1=0.80 at ~20 ms per case.
+              Closed the 4–5 year rare-disease diagnosis gap with a hybrid engine where Phrank handles rare
+              disorders alongside a medical LLM for common cases, all routed by a lightweight meta-learner. Replaced
+              a slow RAG prototype with ClinPhen for reliable symptom extraction (negation + family history) hitting
+              P=0.84 / R=0.78 / F1=0.80 at ~20 ms per case, then evaluated on 50 real vignettes plus ~1k synthetic
+              rare patients with Top-k accuracy, MRR, extraction precision/recall/F1, and negation accuracy.
             </p>
           </article>
           <article class="timeline-card">
@@ -270,20 +274,20 @@
               <span class="badge">Jun 2025 — Present</span>
               <span>Harvard & BCH CHIP Lab</span>
             </div>
-            <h3>RareMind Intelligence System</h3>
+            <h3>Agentic Unified Review Platform</h3>
             <p>
-              Multi-agent architecture with Relevance Gate, Layout Parser, and
-              ClinPhen fact-checker to turn unstructured media into structured
-              public-health alerts, increasing new data discovery by 12%.
+              Built a modular review stack for public-health surveillance with role-specific agents (Relevance Gate,
+              Layout Parser, Fact Checker, Credibility Scorer, Arbiter) plus an LLM-validated extraction pipeline to
+              transform static web scraping into structured alerts.
             </p>
             <ul class="tag-list">
-              <li>Multi-agent LLMs</li>
-              <li>ClinPhen</li>
-              <li>FastAPI</li>
+              <li>Multi-agent Systems</li>
+              <li>LLM Evaluation</li>
+              <li>Data Validation</li>
             </ul>
             <div class="project-links">
-              <a href="https://github.com/AgarwalVibha/rare-disease-diagnosis" target="_blank" rel="noopener"
-                >Architecture notes</a
+              <a href="assets/26_ResumeFS.pdf" target="_blank" rel="noopener"
+                >Case metrics</a
               >
             </div>
           </article>
@@ -292,19 +296,19 @@
               <span class="badge">Sep 2025 — Present</span>
               <span>Harvard IACS</span>
             </div>
-            <h3>ChronicQue Rare Disease Navigator</h3>
+            <h3>ChroniCue Diagnostic Engine</h3>
             <p>
-              Hybrid RAG system pairing a disease matcher with a meta-learner that
-              routes cases between ClinPhen and knowledge-graph lookups, hitting
-              0.80 F1 and 20 ms latency per case.
+              Hybrid matcher where Phrank scores rare diseases, a medical LLM handles common cases, and ClinPhen
+              powers symptom extraction with negation handling, all orchestrated by a meta-learner for 20 ms responses
+              at F1 0.80.
             </p>
             <ul class="tag-list">
-              <li>RAG</li>
+              <li>Phrank</li>
+              <li>ClinPhen</li>
               <li>Meta-learning</li>
-              <li>Clinical AI</li>
             </ul>
             <div class="project-links">
-              <a href="project-hydrogeo.html">Research notes</a>
+              <a href="project-hydrogeo.html">Evaluation summary</a>
             </div>
           </article>
           <article class="project-card">
@@ -327,26 +331,6 @@
               <a href="https://github.com/jessicayanwang/Age-and-Disability-Debias-with-Context-Debias" target="_blank" rel="noopener"
                 >GitHub</a
               >
-            </div>
-          </article>
-          <article class="project-card">
-            <div class="project-top">
-              <span class="badge">2024 — 2025</span>
-              <span>ClinPhen Prototype</span>
-            </div>
-            <h3>ClinPhen RAG Prototype</h3>
-            <p>
-              Delivered a reliable symptom history extractor with ClinPhen for
-              ChronicQue—balancing precision/recall/F1 plus negation accuracy to
-              support physicians.
-            </p>
-            <ul class="tag-list">
-              <li>ClinPhen</li>
-              <li>Symptom Extraction</li>
-              <li>LLM Evaluation</li>
-            </ul>
-            <div class="project-links">
-              <a href="project-wildfire.html">Technical brief</a>
             </div>
           </article>
           <article class="project-card">

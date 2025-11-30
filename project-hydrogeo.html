@@ -1,265 +1,136 @@
-<!DOCTYPE HTML>
-<!--
-	Dopetrope by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Dopetrope by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="no-sidebar is-preload">
-		<div id="page-wrapper">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Climate-Hydrology Multilevel Analysis · Joanna Wang</title>
+    <meta
+      name="description"
+      content="Multilevel and panel modeling of watershed response to changing climate drivers."
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/site.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="logo"><a href="index.html">Joanna Wang</a></div>
+      <nav class="primary-nav" aria-label="Primary">
+        <a href="index.html#about">About</a>
+        <a href="index.html#education">Education</a>
+        <a href="index.html#experience">Experience</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <a
+        class="button ghost"
+        href="assets/26_ResumeFS.pdf"
+        target="_blank"
+        rel="noopener"
+        >Résumé</a
+      >
+    </header>
 
-			<!-- Header -->
-				<section id="header">
+    <main>
+      <article class="case-hero">
+        <div>
+          <p class="eyebrow">Research notes</p>
+          <h1>Climate-Hydrology Multilevel Analysis</h1>
+          <p class="lead">
+            Mapping how aridity, seasonality, and biome context modulate streamflow across
+            hundreds of North American watersheds using multilevel and Bayesian techniques.
+          </p>
+        </div>
+        <div class="case-meta">
+          <div>
+            <span class="label">Timeline</span>
+            <p>2023 — Ongoing</p>
+          </div>
+          <div>
+            <span class="label">Role</span>
+            <p>Graduate Researcher · UBC Hydrology &amp; Ecohydraulics Lab</p>
+          </div>
+          <div>
+            <span class="label">Stack</span>
+            <p>R (lme4, brms) · Python · PostGIS · QGIS · Panel data</p>
+          </div>
+        </div>
+      </article>
 
-					<!-- Logo -->
-						<h1><a href="index.html">Joanna W</a></h1>
+      <figure class="case-media">
+        <img src="images/watershed.jpg" alt="Basemap of streamflow monitoring sites" loading="lazy" />
+        <figcaption>Clustered watersheds sized by annual discharge to reveal biome contrasts.</figcaption>
+      </figure>
 
-					<!-- Nav -->
-					<nav id="nav">
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<!-- <li>
-								<a href="#">Dropdown</a>
-								<ul>
-									<li><a href="#">Lorem ipsum dolor</a></li>
-									<li><a href="#">Magna phasellus</a></li>
-									<li><a href="#">Etiam dolore nisl</a></li>
-									<li>
-										<a href="#">Phasellus consequat</a>
-										<ul>
-											<li><a href="#">Magna phasellus</a></li>
-											<li><a href="#">Etiam dolore nisl</a></li>
-											<li><a href="#">Veroeros feugiat</a></li>
-											<li><a href="#">Nisl sed aliquam</a></li>
-											<li><a href="#">Dolore adipiscing</a></li>
-										</ul>
-									</li>
-									<li><a href="#">Veroeros feugiat</a></li>
-								</ul>
-							</li>
-							<li><a href="left-sidebar.html">Left Sidebar</a></li>
-							<li><a href="right-sidebar.html">Right Sidebar</a></li> -->
-							<li class="current"><a href="project-hydrogeo.html">Project Details</a></li>
-						</ul>
-					</nav>
+      <div class="case-body">
+        <section class="case-section">
+          <h2>Objective</h2>
+          <p>
+            Build a stacked dataset of annual streamflow metrics (Qmean, Q05, Q95) and
+            climate covariates, then disentangle shared vs. local drivers of hydrologic
+            variability.
+          </p>
+          <ul class="case-list">
+            <li>Quantify long-run trends in discharge and seasonality at the basin level.</li>
+            <li>Separate fixed biome effects from random intercept/slope variation.</li>
+            <li>Probe interactions between aridity index, temperature seasonality, and flow.</li>
+          </ul>
+        </section>
 
-				</section>
+        <section class="case-section">
+          <h2>Analytic design</h2>
+          <p>
+            For every HYDAT watershed I assembled a 20-year panel that pairs gridded
+            precipitation/temperature surfaces with gauge readings. Data QC flagged
+            outliers, filled short gaps, and harmonized coordinate systems.
+          </p>
+          <ul class="case-list">
+            <li>Random-intercept + random-slope models (lme4) to capture basin heterogeneity.</li>
+            <li>Panel regressions with fixed effects (plm) as a robustness check.</li>
+            <li>Hierarchical clustering on random-effects to surface shared risk profiles.</li>
+          </ul>
+        </section>
 
-			<!-- Main -->
-				<section id="main">
-					<div class="container">
+        <section class="case-section">
+          <h2>Modeling workflow</h2>
+          <p>
+            Fit Bayesian multilevel models (brms) for posterior distributions on slopes, then
+            stress-tested with generalized additive models (mgcv) to capture residual
+            nonlinearity.
+          </p>
+          <ul class="case-list">
+            <li>Decomposition of variance components using performance::variance_decomp.</li>
+            <li>Posterior predictive checks to verify overlapping credible intervals.</li>
+            <li>Scenario explorer that perturbs AI/SI inputs to score vulnerability.</li>
+          </ul>
+        </section>
 
-						<!-- Content -->
-							<article class="box post">
-								<a href="#" class="image featured"><img src="images/watershed.jpg" alt="" /></a>
-								<header>
-									<h2>Climate-Hydrology Analysis in Watersheds: A Multilevel Approach</h2>
-									<p>Supervised by Professor Ali Ameli, University of British Columbia (Ongoing)</p>
-								</header>
-								<p>
-									This project investigates hydroclimatic variability and streamflow response across different biomes using multilevel and panel regression modeling. Leveraging spatially gridded annual data on streamflow, aridity index, and seasonality indices, the analysis aims to uncover how hydroclimatic drivers interact over time and space, with a particular focus on variation across clusters (e.g., watersheds or grid codes). This work supports a better understanding of climate impacts on water systems, especially under changing environmental conditions.
-								</p>
-								<!-- <p>
-									Praesent a dolor leo. Duis in felis in tortor lobortis volutpat et pretium tellus. Vestibulum ac ante nisl,
-									a elementum odio. Duis semper risus et lectus commodo fringilla. Maecenas sagittis convallis justo vel mattis.
-									placerat, nunc diam iaculis massa, et aliquet nibh leo non nisl vitae porta lobortis, enim neque fringilla nunc,
-									eget faucibus lacus sem quis nunc suspendisse nec lectus sit amet augue rutrum vulputate ut ut mi. Aenean
-									elementum, mi sit amet porttitor lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor.
-								</p> -->
-								<section>
-									<header>
-										<h3>Key Objectives</h3>
-									</header>
-									<p>
-										1.	Quantify hydroclimatic trends in streamflow metrics across space (clusters/biomes) and time (years).
-										2.	Model spatial heterogeneity by comparing random intercept and random slope models across clusters.
-										3.	Evaluate predictors such as Aridity Index (AI), Seasonality Index (SI), and Seasonality of Flow (SF) on streamflow levels (e.g., Qmean, Q05, Q95).
-										4.	Explore interactions and non-linear patterns between hydroclimatic variables and streamflow using panel data and mixed effects models.
-										5.	Assess biome-level differences and how variability in predictors manifests across ecological or hydrological regions.
-									</p>
-									<!-- <p>
-										Nunc diam iaculis massa, et aliquet nibh leo non nisl vitae porta lobortis, enim neque fringilla nunc,
-										eget faucibus lacus sem quis nunc suspendisse nec lectus sit amet augue rutrum vulputate ut ut mi. Aenean
-										elementum, mi sit amet porttitor lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor
-										sit amet nullam consequat feugiat dolore tempus.
-									</p> -->
-								</section>
-								<section>
-									<header>
-										<h3>Technical Approach</h3>
-									</header>
-									<p>
-										Multilevel modeling using lme4 and lmerTest to capture nested structure (e.g., years nested within spatial units).
-										Panel regression with fixed effects (plm) and generalized additive models (mgcv) for robustness checks.
-										Model comparison and diagnostics using AIC, R², and residual plots (MuMIn, performance).
-										Variance decomposition of streamflow predictors across clusters.
-										Quantile summaries and visualizations for ecological interpretation.
+        <section class="case-section">
+          <h2>Applications</h2>
+          <p>
+            Outputs inform water-resource agencies prioritizing storage upgrades and flow
+            maintenance, while also serving as teaching material for multilevel modeling in
+            environmental contexts.
+          </p>
+          <ul class="case-list">
+            <li>Targeted monitoring plans for basins with high slope variance.</li>
+            <li>Decision briefs for conservation districts balancing ecological flow.</li>
+            <li>Reusable code templates for future ecohydrology cohorts at UBC.</li>
+          </ul>
+        </section>
+      </div>
 
-									</p>
-								</section>
-								<section>
-									<header>
-										<h3>Potential Application</h3>
-									</header>
-									<p>
-										•	Hydrologic Forecasting: Improve understanding of spatially varying streamflow responses to climate, enhancing water resource modeling.
-										•	Climate Impact Assessment: Inform adaptation strategies by identifying regions most vulnerable to changes in seasonality or aridity.
-										•	Ecological and Environmental Planning: Help conservation and water management agencies account for biome-specific hydrologic patterns.
-										•	Research and Education: Provide a template for applying multilevel models to spatiotemporal environmental data.
-									</p>
-								</section>
-							</article>
+      <div class="case-backlink">
+        <a class="button ghost" href="index.html#projects">← Back to portfolio</a>
+      </div>
+    </main>
 
-					</div>
-				</section>
-
-			<!-- Footer -->
-				<section id="footer">
-					<div class="container">
-						<div class="row">
-							<!-- <div class="col-8 col-12-medium">
-								<section>
-									<header>
-										<h2>Blandit nisl adipiscing</h2>
-									</header>
-									<ul class="dates">
-										<li>
-											<span class="date">Jan <strong>27</strong></span>
-											<h3><a href="#">Lorem dolor sit amet veroeros</a></h3>
-											<p>Ipsum dolor sit amet veroeros consequat blandit ipsum phasellus lorem consequat etiam.</p>
-										</li>
-										<li>
-											<span class="date">Jan <strong>23</strong></span>
-											<h3><a href="#">Ipsum sed blandit nisl consequat</a></h3>
-											<p>Blandit phasellus lorem ipsum dolor tempor sapien tortor hendrerit adipiscing feugiat lorem.</p>
-										</li>
-										<li>
-											<span class="date">Jan <strong>15</strong></span>
-											<h3><a href="#">Magna tempus lorem feugiat</a></h3>
-											<p>Dolore consequat sed phasellus lorem sed etiam nullam dolor etiam sed amet sit consequat.</p>
-										</li>
-										<li>
-											<span class="date">Jan <strong>12</strong></span>
-											<h3><a href="#">Dolore tempus ipsum feugiat nulla</a></h3>
-											<p>Feugiat lorem dolor sed nullam tempus lorem ipsum dolor sit amet nullam consequat.</p>
-										</li>
-										<li>
-											<span class="date">Jan <strong>10</strong></span>
-											<h3><a href="#">Blandit tempus aliquam?</a></h3>
-											<p>Feugiat sed tempus blandit tempus adipiscing nisl lorem ipsum dolor sit amet dolore.</p>
-										</li>
-									</ul>
-								</section>
-							</div>
-							<div class="col-4 col-12-medium">
-								<section>
-									<header>
-										<h2>What's this all about?</h2>
-									</header>
-									<a href="#" class="image featured"><img src="images/pic10.jpg" alt="" /></a>
-									<p>
-										This is <strong>Dopetrope</strong> a free, fully responsive HTML5 site template by
-										<a href="http://twitter.com/ajlkn">AJ</a> for <a href="http://html5up.net/">HTML5 UP</a> It's released for free under
-										the <a href="http://html5up.net/license/">Creative Commons Attribution</a> license so feel free to use it for any personal or commercial project &ndash; just don't forget to credit us!
-									</p>
-									<footer>
-										<ul class="actions">
-											<li><a href="#" class="button">Find out more</a></li>
-										</ul>
-									</footer>
-								</section>
-							</div> -->
-							<!-- <div class="col-4 col-6-medium col-12-small">
-								<section>
-									<header>
-										<h2>Tempus consequat</h2>
-									</header>
-									<ul class="divided">
-										<li><a href="#">Lorem ipsum dolor sit amet sit veroeros</a></li>
-										<li><a href="#">Sed et blandit consequat sed tlorem blandit</a></li>
-										<li><a href="#">Adipiscing feugiat phasellus sed tempus</a></li>
-										<li><a href="#">Hendrerit tortor vitae mattis tempor sapien</a></li>
-										<li><a href="#">Sem feugiat sapien id suscipit magna felis nec</a></li>
-										<li><a href="#">Elit class aptent taciti sociosqu ad litora</a></li>
-									</ul>
-								</section>
-							</div> -->
-							<!-- <div class="col-4 col-6-medium col-12-small">
-								<section>
-									<header>
-										<h2>Ipsum et phasellus</h2>
-									</header>
-									<ul class="divided">
-										<li><a href="#">Lorem ipsum dolor sit amet sit veroeros</a></li>
-										<li><a href="#">Sed et blandit consequat sed tlorem blandit</a></li>
-										<li><a href="#">Adipiscing feugiat phasellus sed tempus</a></li>
-										<li><a href="#">Hendrerit tortor vitae mattis tempor sapien</a></li>
-										<li><a href="#">Sem feugiat sapien id suscipit magna felis nec</a></li>
-										<li><a href="#">Elit class aptent taciti sociosqu ad litora</a></li>
-									</ul>
-								</section>
-							</div> -->
-							<div class="col-4 col-12-medium">
-								<section>
-									<header>
-										<h2>Vitae tempor lorem</h2>
-									</header>
-									<ul class="social">
-										<li><a class="icon brands fa-facebook-f" href="#"><span class="label">Facebook</span></a></li>
-										<li><a class="icon brands fa-twitter" href="#"><span class="label">Twitter</span></a></li>
-										<li><a class="icon brands fa-dribbble" href="#"><span class="label">Dribbble</span></a></li>
-										<li><a class="icon brands fa-tumblr" href="#"><span class="label">Tumblr</span></a></li>
-										<li><a class="icon brands fa-linkedin-in" href="#"><span class="label">LinkedIn</span></a></li>
-									</ul>
-									<ul class="contact">
-										<li>
-											<h3>Address</h3>
-											<p>
-												Untitled Incorporated<br />
-												1234 Somewhere Road Suite<br />
-												Nashville, TN 00000-0000
-											</p>
-										</li>
-										<li>
-											<h3>Mail</h3>
-											<p><a href="#">someone@untitled.tld</a></p>
-										</li>
-										<li>
-											<h3>Phone</h3>
-											<p>(800) 000-0000</p>
-										</li>
-									</ul>
-								</section>
-							</div>
-							<div class="col-12">
-
-								<!-- Copyright -->
-									<div id="copyright">
-										<ul class="links">
-											<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-										</ul>
-									</div>
-
-							</div>
-						</div>
-					</div>
-				</section>
-
-		</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+    <footer class="site-footer">
+      <p>Built with curiosity, care, and plenty of coffee.</p>
+      <p>&copy; 2025 Joanna Wang. All rights reserved.</p>
+    </footer>
+  </body>
 </html>

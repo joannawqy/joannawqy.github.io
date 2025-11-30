@@ -1,0 +1,83 @@
+<svg width="960" height="520" viewBox="0 0 960 520" xmlns="http://www.w3.org/2000/svg" font-family="'Space Grotesk', 'Inter', 'Segoe UI', sans-serif">
+  <rect width="960" height="520" fill="#0f1115"/>
+  <g fill="#f5f5f5" font-size="18" font-weight="600">
+    <text x="40" y="60">Treatment</text>
+    <text x="280" y="60">No. of effect sizes</text>
+  </g>
+  <g fill="#b1b6c7" font-size="14">
+    <text x="40" y="90">Feedback</text><text x="320" y="90">121</text>
+    <text x="40" y="115">Information</text><text x="320" y="115">73</text>
+    <text x="40" y="140">Feedback + Social</text><text x="320" y="140">66</text>
+    <text x="40" y="165">Feedback + Info + Social</text><text x="320" y="165">51</text>
+    <text x="40" y="190">Social</text><text x="320" y="190">48</text>
+    <text x="40" y="215">Feedback + Info + Social + Motivation</text><text x="320" y="215">43</text>
+    <text x="40" y="240">Feedback + Motivation</text><text x="320" y="240">30</text>
+    <text x="40" y="265">Information + Motivation</text><text x="320" y="265">23</text>
+    <text x="40" y="290">Monetary</text><text x="320" y="290">22</text>
+    <text x="40" y="315">Information + Social</text><text x="320" y="315">21</text>
+  </g>
+  <g transform="translate(560,260)">
+    <circle cx="0" cy="0" r="190" fill="none" stroke="rgba(117,240,194,0.25)" stroke-dasharray="6 12"/>
+    <circle cx="0" cy="0" r="40" fill="#16191f" stroke="#75f0c2" stroke-width="2"/>
+    <text x="0" y="6" text-anchor="middle" fill="#f5f5f5" font-weight="600">Control</text>
+    <g font-size="12" fill="#0f1115" font-weight="600">
+      <circle cx="0" cy="-230" r="32" fill="#f7a940" stroke="#fddca6" stroke-width="2"/>
+      <text x="0" y="-226" text-anchor="middle">Feedback</text>
+
+      <circle cx="110" cy="-205" r="28" fill="#f7a940" stroke="#fddca6" stroke-width="2"/>
+      <text x="110" y="-201" text-anchor="middle">Info</text>
+
+      <circle cx="200" cy="-120" r="28" fill="#f7a940" stroke="#fddca6" stroke-width="2"/>
+      <text x="200" y="-116" text-anchor="middle">Info +</text>
+      <text x="200" y="-101" text-anchor="middle">Social</text>
+
+      <circle cx="235" cy="0" r="30" fill="#f7a940" stroke="#fddca6" stroke-width="2"/>
+      <text x="235" y="4" text-anchor="middle">Social</text>
+
+      <circle cx="200" cy="120" r="30" fill="#f7a940" stroke="#fddca6" stroke-width="2"/>
+      <text x="200" y="124" text-anchor="middle">Social +</text>
+      <text x="200" y="139" text-anchor="middle">Mot.</text>
+
+      <circle cx="110" cy="205" r="32" fill="#f7a940" stroke="#fddca6" stroke-width="2"/>
+      <text x="110" y="209" text-anchor="middle">Motivation</text>
+
+      <circle cx="0" cy="230" r="32" fill="#f7a940" stroke="#fddca6" stroke-width="2"/>
+      <text x="0" y="234" text-anchor="middle">Monetary</text>
+
+      <circle cx="-110" cy="205" r="28" fill="#f7a940" stroke="#fddca6" stroke-width="2"/>
+      <text x="-110" y="209" text-anchor="middle">Mot. +</text>
+      <text x="-110" y="224" text-anchor="middle">Info</text>
+
+      <circle cx="-200" cy="120" r="30" fill="#f7a940" stroke="#fddca6" stroke-width="2"/>
+      <text x="-200" y="124" text-anchor="middle">Info +</text>
+      <text x="-200" y="139" text-anchor="middle">Mot.</text>
+
+      <circle cx="-235" cy="0" r="32" fill="#f7a940" stroke="#fddca6" stroke-width="2"/>
+      <text x="-235" y="4" text-anchor="middle">Info</text>
+      <text x="-235" y="19" text-anchor="middle">+ Social +</text>
+      <text x="-235" y="34" text-anchor="middle">Mot.</text>
+
+      <circle cx="-200" cy="-120" r="30" fill="#f7a940" stroke="#fddca6" stroke-width="2"/>
+      <text x="-200" y="-116" text-anchor="middle">Feedback</text>
+      <text x="-200" y="-101" text-anchor="middle">+ Social</text>
+
+      <circle cx="-110" cy="-205" r="28" fill="#f7a940" stroke="#fddca6" stroke-width="2"/>
+      <text x="-110" y="-201" text-anchor="middle">Feedback</text>
+      <text x="-110" y="-186" text-anchor="middle">+ Info</text>
+    </g>
+    <g stroke="#d3d8e8" stroke-width="2" stroke-opacity="0.65" fill="none">
+      <path d="M0 -40 L 0 -198"/>
+      <path d="M28 -28 L 96 -182"/>
+      <path d="M40 0 L 205 0"/>
+      <path d="M28 28 L 96 182"/>
+      <path d="M0 40 L 0 198"/>
+      <path d="M-28 28 L -96 182"/>
+      <path d="M-40 0 L -205 0"/>
+      <path d="M-28 -28 L -96 -182"/>
+      <path d="M-14 -35 L -190 -110"/>
+      <path d="M14 -35 L 190 -110"/>
+      <path d="M14 35 L 190 110"/>
+      <path d="M-14 35 L -190 110"/>
+    </g>
+  </g>
+</svg>
